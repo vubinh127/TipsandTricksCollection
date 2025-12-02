@@ -105,6 +105,8 @@ body {
     border-radius: 6px;
     box-shadow: 0 0 15px var(--tron-blue-dark);
     background: #000;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .list_tips .image img {
@@ -123,14 +125,16 @@ body {
     color: var(--tron-blue);
 }
 
-.copy-btn {
+.copy-btn,
+.download-btn {
     background: transparent !important;
     border: 1px solid var(--tron-border) !important;
     color: var(--tron-blue) !important;
     transition: 0.3s;
 }
 
-.copy-btn:hover {
+.copy-btn:hover,
+.download-btn:hover {
     background: var(--tron-blue) !important;
     color: black !important;
     box-shadow: 0 0 12px var(--tron-blue);

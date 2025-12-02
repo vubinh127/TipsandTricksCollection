@@ -1,0 +1,200 @@
+/* ---------------------------
+   TRON THEME COLORS 
+---------------------------- */
+:root {
+    --tron-bg: #0a0f1f;
+    --tron-blue: #00f0ff;
+    --tron-blue-dark: #0098a3;
+    --tron-text: #e5faff;
+    --tron-border: #00eaff;
+}
+
+body {
+    background: var(--tron-bg);
+    color: var(--tron-text);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+/* ---------------------------
+   HEADER + MENU 
+---------------------------- */
+.tron-header {
+    background: rgba(0, 20, 30, 0.8);
+    border-bottom: 2px solid var(--tron-border);
+    box-shadow: 0 0 15px var(--tron-blue);
+}
+
+.site-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--tron-blue);
+    text-shadow: 0 0 10px var(--tron-blue);
+    margin: 0;
+}
+
+.tron-menu {
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+}
+
+.tron-menu li a {
+    color: var(--tron-blue);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border: 1px solid var(--tron-border);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.tron-menu li a:hover {
+    background: var(--tron-blue);
+    color: black;
+    box-shadow: 0 0 12px var(--tron-blue);
+    transform: translateY(-2px);
+}
+
+/* ---------------------------
+   BANNER
+---------------------------- */
+.banner img {
+    width: 100%;
+    max-height: max-content;
+    object-fit: cover;
+    border-bottom: 2px solid var(--tron-border);
+    box-shadow: 0 0 20px var(--tron-blue-dark);
+}
+
+/* ---------------------------
+   ACCORDION
+---------------------------- */
+.accordion-button {
+    background: #04101b !important;
+    color: var(--tron-blue) !important;
+    border: 1px solid var(--tron-border);
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black !important;
+    background: var(--tron-blue) !important;
+    box-shadow: 0 0 20px var(--tron-blue);
+}
+
+.accordion-button:hover {
+    filter: brightness(1.2);
+}
+
+.accordion-body {
+    background: #061522;
+    border-top: 1px solid var(--tron-border);
+    color: var(--tron-text);
+}
+
+.list_tips .image {
+    width: 100%;
+    max-width: 70px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 15px var(--tron-blue-dark);
+    background: #000;
+}
+
+.list_tips .image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------------
+   CODE BOX + COPY BUTTON
+---------------------------- */
+.code-box code {
+    background: rgba(0, 255, 255, 0.08);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--tron-border);
+    color: var(--tron-blue);
+}
+
+.copy-btn {
+    background: transparent !important;
+    border: 1px solid var(--tron-border) !important;
+    color: var(--tron-blue) !important;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: var(--tron-blue) !important;
+    color: black !important;
+    box-shadow: 0 0 12px var(--tron-blue);
+    transform: translateY(-2px);
+}
+
+/* ---------------------------
+   FOOTER
+---------------------------- */
+footer {
+    background: rgba(0, 20, 30, 0.8);
+    border-top: 1px solid var(--tron-border);
+    color: var(--tron-blue);
+    text-shadow: 0 0 10px var(--tron-blue);
+}
+
+/* ---------------------------
+   RESPONSIVE 
+---------------------------- */
+@media (max-width: 768px) {
+    .tron-menu {
+        flex-direction: column;
+        text-align: right;
+        gap: 12px;
+    }
+}
+
+.theme-btn {
+    margin-left: 20px;
+    padding: 8px 16px;
+    border: 1px solid var(--tron-border);
+    background: var(--tron-blue);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 1;
+    box-shadow: 0 0 15px var(--tron-blue);
+}
+
+body.ares-theme {
+    --tron-bg: #1a0604;              /* Dark red/black */
+    --tron-blue: #ff3b30;            /* Main red glow */
+    --tron-blue-dark: #ff7a00;       /* Orange accent */
+    --tron-text: #ffe9e6;            /* Light warm text */
+    --tron-border: #ff4d00;          /* Orange-red border glow */
+}
+
+.list_tips h2 {
+    color: var(--tron-blue);
+    text-shadow: 0 0 10px var(--tron-blue);
+    text-align: center;
+}
+
+.list_tips p.description {
+    text-shadow: 0 0 10px var(--tron-blue);
+    text-align: center;
+}
+
+.list_tips .accordion-body small {
+    font-size: 12px;
+    margin: 10px 0;
+    display: block;
+}

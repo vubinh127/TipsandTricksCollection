@@ -12,17 +12,27 @@ $(document).ready(function () {
         });
     });
 
-     $("#themeToggle").click(function () {
+    function changeBanner(src) {
+        const banner = document.getElementById("bannerImg");
 
-        $("body").toggleClass("ares-theme");
+        banner.classList.add("fade-out");
 
-        if ($("body").hasClass("ares-theme")) {
-            $(this).text("Legacy Mode");
-            $("#bannerImg").attr("src", "/assets/images/ares.webp");
+        setTimeout(() => {
+            banner.src = src;
+            banner.classList.remove("fade-out");
+        }, 300);
+    }
+
+    $("#themeToggle").on("click", function () {
+        const body = $("body");
+
+        if (body.hasClass("ares-theme")) {
+            body.removeClass("ares-theme").addClass("legacy-theme");
+            changeBanner("/assets/images/legacy.jpg");
         } else {
-            $(this).text("Ares Mode");
-            $("#bannerImg").attr("src", "/assets/images/legacy.jpg");
+            body.removeClass("legacy-theme").addClass("ares-theme");
+            changeBanner("/assets/images/ares.webp");
         }
-
     });
+
 });

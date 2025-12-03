@@ -283,3 +283,80 @@ body.ares-theme {
     to   { transform: rotate(360deg); }
 }
 
+
+/* Wrapper for each OS row */
+.os-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+/* OS label */
+.os-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid  var(--tron-blue) ;
+    border-radius: 6px;
+    cursor: default;
+    transition: 0.3s;
+    min-width: 135px;
+}
+
+.os-tab i {
+    font-size: 20px;
+}
+
+/* Code box */
+.code-box code {
+    border: 1px solid  var(--tron-blue) ;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+/* Copy button */
+.copy-btn {
+    border: 1px solid  var(--tron-blue) ;
+    color: black ;
+    background: var(--tron-blue);
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    border: 1px solid  var(--tron-blue) ;
+    color: black ;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .os-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .os-tab {
+        width: 100%;
+    }
+
+    .code-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .code-box code {
+        width: 100%;
+        display: block;
+        word-wrap: break-word;
+    }
+}

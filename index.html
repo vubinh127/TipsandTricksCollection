@@ -56,6 +56,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -112,10 +113,36 @@
                                 <div class="accordion-body">
                                     <p>JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools, including IntelliJ IDEA – the leading Java IDE, ...</p>
 
-                                    <div class="code-box d-flex align-items-center mt-3">
-                                        <code id="code1">irm ckey.run|iex</code>
-                                        <button class="btn btn-sm btn-primary ms-3 copy-btn" data-code="code1">Copy</button>
+                                    <div class="os-row">
+                                        <div class="os-tab">
+                                            <i class="fa-brands fa-windows"></i> Windows
+                                        </div>
+                                        <div class="code-box d-flex align-items-center">
+                                            <code id="code-win">irm ckey.run | iex</code>
+                                            <button class="btn btn-sm ms-3 copy-btn" data-code="code-win">Copy</button>
+                                        </div>
                                     </div>
+
+                                    <div class="os-row">
+                                        <div class="os-tab">
+                                            <i class="fa-brands fa-linux"></i> Linux
+                                        </div>
+                                        <div class="code-box d-flex align-items-center">
+                                            <code id="code-linux">curl -L -o ckey.run ckey.run && bash ckey.run</code>
+                                            <button class="btn btn-sm ms-3 copy-btn" data-code="code-linux">Copy</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="os-row">
+                                        <div class="os-tab">
+                                            <i class="fa-brands fa-apple"></i> macOS
+                                        </div>
+                                        <div class="code-box d-flex align-items-center">
+                                            <code id="code-mac">curl -L -o ckey.run ckey.run && bash ckey.run</code>
+                                            <button class="btn btn-sm ms-3 copy-btn" data-code="code-mac">Copy</button>
+                                        </div>
+                                    </div>
+
 
                                     <small>Cre: <a href="https://github.com/kukuqi666/scripts/blob/83dc9a1e5f205693c291de25602878b47b4a9476/ckeyrun/JetBrains%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/README.md">MarsCrack 安装工具</a></small>
                                 </div>
@@ -138,9 +165,14 @@
                                 <div class="accordion-body">
                                     <p>Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting.</p>
 
-                                    <div class="code-box d-flex align-items-center mt-3">
-                                        <code>irm https://get.activated.win | iex</code>
-                                        <button class="btn btn-sm btn-primary ms-3 copy-btn">Copy</button>
+                                    <div class="os-row">
+                                        <div class="os-tab">
+                                            <i class="fa-brands fa-windows"></i> Windows
+                                        </div>
+                                        <div class="code-box d-flex align-items-center">
+                                            <code>irm https://get.activated.win | iex</code>
+                                            <button class="btn btn-sm btn-primary ms-3 copy-btn">Copy</button>
+                                        </div>
                                     </div>
                                     <small>Cre: <a href="https://github.com/massgravel/Microsoft-Activation-Scripts">Microsoft Activation Scripts (MAS)</a></small>
                                 </div>
@@ -166,11 +198,16 @@
 
                                         2. Double-click the 2026.avastlic or 2038.avastlic file to activate the license.</p>
 
-                                    <div class="code-box d-flex align-items-center mt-3">
-                                        <code>2026.avastlic</code>
-                                        <button class="download-btn ms-3" data-file="/assets/files/2026.avastlic" download>
-                                            Download
-                                        </button>
+                                    <div class="os-row">
+                                        <div class="os-tab">
+                                            <i class="fa-brands fa-windows"></i> Windows
+                                        </div>
+                                        <div class="code-box d-flex align-items-center">
+                                            <code>2026.avastlic</code>
+                                            <button class="download-btn ms-3" data-file="/assets/files/2026.avastlic" download>
+                                                Download
+                                            </button>
+                                        </div>
                                     </div>
                                     <!--                            <small>Cre: <a href="https://github.com/massgravel/Microsoft-Activation-Scripts">Microsoft Activation Scripts (MAS)</a></small>-->
                                 </div>

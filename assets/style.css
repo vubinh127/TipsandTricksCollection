@@ -48,6 +48,7 @@ body {
     border: 1px solid var(--tron-border);
     border-radius: 6px;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .tron-menu li a:hover {
@@ -60,12 +61,26 @@ body {
 /* ---------------------------
    BANNER
 ---------------------------- */
+.banner {
+    max-height: 500px;
+    overflow: hidden;
+}
+
 .banner img {
     width: 100%;
     max-height: max-content;
     object-fit: cover;
     border-bottom: 2px solid var(--tron-border);
     box-shadow: 0 0 20px var(--tron-blue-dark);
+}
+
+#bannerImg {
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+}
+
+#bannerImg.fade-out {
+    opacity: 0;
 }
 
 /* ---------------------------
@@ -201,4 +216,147 @@ body.ares-theme {
     font-size: 12px;
     margin: 10px 0;
     display: block;
+}
+
+/* SECTION STYLING - TRON ARES THEME */
+
+.why-choose-us h2,
+.confirm-virus h2 {
+    color: var(--tron-blue); /* Tron Ares red */
+    font-weight: 700;
+}
+
+/* Box */
+.choose-box,
+.virus-box {
+    background: #04101b ;
+    border-radius: 12px;
+    border: 1px solid var(--tron-blue);
+    transition: 0.3s;
+}
+
+/* Hover */
+.choose-box:hover,
+.virus-box:hover {
+    transform: translateY(-6px);
+    border: 1px solid var(--tron-border);
+    border: 1px solid var(--tron-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .choose-box, .virus-box {
+        padding: 25px 20px;
+    }
+}
+
+.updating-box {
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 30, 45, 0.6);
+    padding: 12px 20px;
+    border: 1px solid var(--tron-border);
+    border-radius: 8px;
+    color: var(--tron-blue);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 10px var(--tron-blue-dark);
+    backdrop-filter: blur(4px);
+    margin:20px auto;
+}
+
+.updating-box .spinner {
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--tron-blue);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    box-shadow: 0 0 8px var(--tron-blue);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+
+/* Wrapper for each OS row */
+.os-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+/* OS label */
+.os-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid  var(--tron-blue) ;
+    border-radius: 6px;
+    cursor: default;
+    transition: 0.3s;
+    min-width: 135px;
+}
+
+.os-tab i {
+    font-size: 20px;
+}
+
+/* Code box */
+.code-box code {
+    border: 1px solid  var(--tron-blue) ;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+/* Copy button */
+.copy-btn {
+    border: 1px solid  var(--tron-blue) ;
+    color: black ;
+    background: var(--tron-blue);
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    border: 1px solid  var(--tron-blue) ;
+    color: black ;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .os-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .os-tab {
+        width: 100%;
+    }
+
+    .code-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .code-box code {
+        width: 100%;
+        display: block;
+        word-wrap: break-word;
+    }
 }

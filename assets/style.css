@@ -360,3 +360,10 @@ body.ares-theme {
         word-wrap: break-word;
     }
 }
+
+.ads-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
